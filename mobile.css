@@ -699,6 +699,12 @@ body {
         padding: 0 16px; /* Отступы от краев экрана смартфона */
     }
 
+    body {
+        background-attachment: scroll !important; /* Фон скроллится плавно и не прыгает */
+        background-size: cover;
+        min-height: 100vh;
+    }
+
     /* --- Шапка в стиле iOS --- */
     .header {
         flex-direction: column;
@@ -805,7 +811,7 @@ body {
     }
 
     #current .left_card .line {
-        background:#001B5E;
+        background: #001B5E;
         height: 1px;
         margin: 8px 0;
     }
@@ -838,7 +844,7 @@ body {
 
     #current .right_card h1 {
         font-size: 10px;
-        color:white;
+        color: white;
         letter-spacing: 0.5px;
         margin-bottom: 0;
     }
@@ -875,6 +881,11 @@ body {
         width: 20px;
         height: 20px;
         margin-right: 8px;
+        background-img: #001B5E;
+    }
+
+    #current .right_card .windDir img {
+
     }
 
     #current .right_card .windDir h3 {
@@ -953,7 +964,7 @@ body {
 
     #currentNext .conteiner .nextDay .weather div h3:last-child {
         font-size: 15px;
-        color:white;
+        color: white;
     }
 
     #currentNext .conteiner .nextDay .line {
