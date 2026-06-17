@@ -1,8 +1,358 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, p {
+    color: white;
+    text-shadow: 1px 3px 4px rgb(28 24 76 / 0.75);
+}
+
+
+body {
+    background: url("img/page_main.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.header #search {
+    margin-right: 100px;
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 230px;
+}
+
+
+.header #search #name-filter {
+    width: 100%;
+    height: 45px;
+    line-height: 28px;
+       padding: 10px 15px 10px 1.5rem;
+
+
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 25px;
+    background: rgba(217, 217, 217, .35);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    color: white;
+    font-size: 20px;
+    outline: none;
+    transition: .3s ease;
+    box-sizing: border-box;
+}
+
+
+.header #search #name-filter::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+}
+
+.header #search #name-filter:focus,
+.header #search #name-filter:hover {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(217, 217, 217, 0.45);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+
+.header #search img {
+    position: absolute;
+    right: 1.2rem;
+    width: 1.1rem;
+    height: 1.1rem;
+
+
+    filter: invert(1);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+#city {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 25px;
+    background: rgba(217, 217, 217, .35);
+    backdrop-filter: blur(20px);
+
+    width: 230px;
+    padding: 10px 40px 10px 15px;
+
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+    /*box-shadow: 0 0 15px rgba(255,255,255,.15);*/
+}
+
+#city option {
+    background: #2d3f6e;
+    color: white;
+}
+
+
+#current {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#current .left_card {
+    background: rgb(234 234 234 / 0.4);
+    backdrop-filter: blur(20px);
+    border: 2px solid #DCDCDC;
+    border-radius: 25px;
+    width: 250px;
+    height: 268px;
+    padding: 20px 13px;
+}
+
+#current .left_card h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Bahnschrift";
+    /*text-shadow: 1px 3px 4px 0 rgb(28 24 76 / 0.75);*/
+}
+
+#current .left_card .temp h3 {
+    font-size: 60px;
+    font-family: "Bahnschrift";
+    margin-bottom: 30px;
+}
+
+#current .left_card .rainChance h3 {
+    font-size: 17px;
+    font-family: "Bahnschrift";
+}
+
+#current .left_card .rainChance {
+    display: flex;
+    align-items: center;
+}
+
+#current .left_card .rainChance img {
+    margin-right: 10px;
+}
+
+#current .center_card {
+    background: rgb(234 234 234 / 0.4);
+    backdrop-filter: blur(20px);
+    border: 2px solid #DCDCDC;
+    border-radius: 25px;
+    margin: 0 50px;
+    width: 400px;
+    height: 268px;
+    padding: 20px 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#current .center_card h2 {
+    font-family: "Bahnschrift";
+}
+
+#current .center_card p {
+    font-family: "Bahnschrift";
+}
+
+#current .right_card {
+    background: rgb(234 234 234 / 0.4);
+    backdrop-filter: blur(20px);
+    border: 2px solid #DCDCDC;
+    border-radius: 25px;
+    width: 250px;
+    height: 268px;
+    padding: 20px 13px;
+}
+
+#current .right_card h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Bahnschrift";
+}
+
+#current .right_card .windSpeed {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+#current .right_card .windSpeed img {
+    margin-right: 10px;
+}
+
+#current .right_card .windSpeed h3 {
+    font-size: 17px;
+    font-family: "Bahnschrift";
+
+}
+
+#current .right_card .windDir {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 12px;
+}
+
+#current .right_card .windDir img {
+    margin-right: 10px;
+}
+
+#current .right_card .windDir h3 {
+    font-size: 17px;
+}
+
+#current .line {
+    border-radius: 25px;
+    background: #001B5E;
+    width: 100%;
+    height: 3px;
+    margin: 20px 0;
+}
+
+
+#currentNext {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#currentNext .conteiner .nextDay .line {
+    border-radius: 25px;
+    background: #001B5E;
+    width: 100%;
+    height: 3px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#currentNext .conteiner {
+    display: flex;
+    align-items: center;
+}
+
+#currentNext .conteiner .nextDay {
+    /*background: rgb(234 234 234 / 0.4);*/
+    background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);
+    backdrop-filter: blur(20px);
+    border: 2px solid #DCDCDC;
+    border-radius: 25px;
+    width: 400px;
+    height: 268px;
+    padding: 15px 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 25px;
+}
+
+#currentNext .conteiner .nextDay h1 {
+    font-size: 23px;
+    margin-top: 5px;
+}
+
+#currentNext .conteiner .nextDay .weather {
+    display: flex;
+    width: 100%;
+    height: 180px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#currentNext .conteiner .nextDay .weather img {
+    width: 35%
+}
+
+#currentNext .conteiner .nextDay .weather h3 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+#currentNext .conteiner .nextDay .astro {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#currentNext .conteiner .nextDay .astro .line {
+    border-radius: 25px;
+    background: #001B5E;
+    width: 12%;
+    transform: rotate(90deg);
+    height: 3px;
+    margin: 20px 0;
+}
+
+#currentNext .conteiner .nextDay .astro .sunrise {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+#currentNext .conteiner .nextDay .astro .sunrise img {
+    width: 25%;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+#currentNext .conteiner .nextDay .astro .sunrise h2 {
+    font-size: 18px;
+}
+
+#currentNext .conteiner .nextDay .astro .sunset {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#currentNext .conteiner .nextDay .astro .sunset img {
+    width: 25%;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+#currentNext .conteiner .nextDay .astro .sunset h2 {
+    font-size: 18px;
+}
+
 /** {*/
 /*    margin: 0;*/
 /*    padding: 0;*/
-
-
+/*    box-sizing: border-box; !* Чтобы paddings не ломали ширину блоков на iPhone *!*/
 /*}*/
 
 /*h1, h2, h3, p {*/
@@ -10,14 +360,13 @@
 /*    text-shadow: 1px 3px 4px rgb(28 24 76 / 0.75);*/
 /*}*/
 
-
 /*body {*/
 /*    background: url("img/page_main.svg");*/
 /*    background-repeat: no-repeat;*/
 /*    background-position: center center;*/
 /*    background-size: cover;*/
 /*    background-attachment: fixed;*/
-/*    height: 100vh;*/
+/*    min-height: 100vh;*/
 /*}*/
 
 /*.main {*/
@@ -45,13 +394,11 @@
 /*    width: 230px;*/
 /*}*/
 
-
 /*.header #search #name-filter {*/
 /*    width: 100%;*/
 /*    height: 45px;*/
 /*    line-height: 28px;*/
-/*       padding: 10px 15px 10px 1.5rem;*/
-
+/*    padding: 10px 15px 10px 1.5rem;*/
 
 /*    border: 1px solid rgba(255, 255, 255, .4);*/
 /*    border-radius: 25px;*/
@@ -66,7 +413,6 @@
 /*    box-sizing: border-box;*/
 /*}*/
 
-
 /*.header #search #name-filter::placeholder {*/
 /*    color: rgba(255, 255, 255, 0.6);*/
 /*    font-size: 18px;*/
@@ -80,13 +426,11 @@
 /*    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);*/
 /*}*/
 
-
 /*.header #search img {*/
 /*    position: absolute;*/
 /*    right: 1.2rem;*/
 /*    width: 1.1rem;*/
 /*    height: 1.1rem;*/
-
 
 /*    filter: invert(1);*/
 /*    opacity: 0.7;*/
@@ -109,15 +453,12 @@
 /*    color: white;*/
 /*    font-size: 20px;*/
 /*    cursor: pointer;*/
-
-/*    !*box-shadow: 0 0 15px rgba(255,255,255,.15);*!*/
 /*}*/
 
 /*#city option {*/
 /*    background: #2d3f6e;*/
 /*    color: white;*/
 /*}*/
-
 
 /*#current {*/
 /*    display: flex;*/
@@ -139,7 +480,6 @@
 /*    font-size: 20px;*/
 /*    margin-bottom: 20px;*/
 /*    font-family: "Bahnschrift";*/
-/*    !*text-shadow: 1px 3px 4px 0 rgb(28 24 76 / 0.75);*!*/
 /*}*/
 
 /*#current .left_card .temp h3 {*/
@@ -214,7 +554,6 @@
 /*#current .right_card .windSpeed h3 {*/
 /*    font-size: 17px;*/
 /*    font-family: "Bahnschrift";*/
-
 /*}*/
 
 /*#current .right_card .windDir {*/
@@ -240,7 +579,6 @@
 /*    margin: 20px 0;*/
 /*}*/
 
-
 /*#currentNext {*/
 /*    margin-top: 30px;*/
 /*    display: flex;*/
@@ -260,14 +598,12 @@
 /*    justify-content: center;*/
 /*}*/
 
-
 /*#currentNext .conteiner {*/
 /*    display: flex;*/
 /*    align-items: center;*/
 /*}*/
 
 /*#currentNext .conteiner .nextDay {*/
-/*    !*background: rgb(234 234 234 / 0.4);*!*/
 /*    background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);*/
 /*    backdrop-filter: blur(20px);*/
 /*    border: 2px solid #DCDCDC;*/
@@ -296,7 +632,7 @@
 /*}*/
 
 /*#currentNext .conteiner .nextDay .weather img {*/
-/*    width: 35%*/
+/*    width: 35%;*/
 /*}*/
 
 /*#currentNext .conteiner .nextDay .weather h3 {*/
@@ -350,344 +686,6 @@
 /*#currentNext .conteiner .nextDay .astro .sunset h2 {*/
 /*    font-size: 18px;*/
 /*}*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Чтобы paddings не ломали ширину блоков на iPhone */
-}
-
-h1, h2, h3, p {
-    color: white;
-    text-shadow: 1px 3px 4px rgb(28 24 76 / 0.75);
-}
-
-body {
-    background: url("img/page_main.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-.main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.header {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    margin-top: 20px;
-}
-
-.header #search {
-    margin-right: 100px;
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    width: 230px;
-}
-
-.header #search #name-filter {
-    width: 100%;
-    height: 45px;
-    line-height: 28px;
-    padding: 10px 15px 10px 1.5rem;
-
-    border: 1px solid rgba(255, 255, 255, .4);
-    border-radius: 25px;
-    background: rgba(217, 217, 217, .35);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-
-    color: white;
-    font-size: 20px;
-    outline: none;
-    transition: .3s ease;
-    box-sizing: border-box;
-}
-
-.header #search #name-filter::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 18px;
-}
-
-.header #search #name-filter:focus,
-.header #search #name-filter:hover {
-    outline: none;
-    border-color: rgba(255, 255, 255, 0.8);
-    background: rgba(217, 217, 217, 0.45);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-.header #search img {
-    position: absolute;
-    right: 1.2rem;
-    width: 1.1rem;
-    height: 1.1rem;
-
-    filter: invert(1);
-    opacity: 0.7;
-    z-index: 2;
-}
-
-#city {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    border: 1px solid rgba(255, 255, 255, .4);
-    border-radius: 25px;
-    background: rgba(217, 217, 217, .35);
-    backdrop-filter: blur(20px);
-
-    width: 230px;
-    padding: 10px 40px 10px 15px;
-
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-#city option {
-    background: #2d3f6e;
-    color: white;
-}
-
-#current {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-#current .left_card {
-    background: rgb(234 234 234 / 0.4);
-    backdrop-filter: blur(20px);
-    border: 2px solid #DCDCDC;
-    border-radius: 25px;
-    width: 250px;
-    height: 250px;
-    padding: 20px 13px;
-}
-
-#current .left_card h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-family: "Bahnschrift";
-}
-
-#current .left_card .temp h3 {
-    font-size: 60px;
-    font-family: "Bahnschrift";
-    margin-bottom: 30px;
-}
-
-#current .left_card .rainChance h3 {
-    font-size: 17px;
-    font-family: "Bahnschrift";
-}
-
-#current .left_card .rainChance {
-    display: flex;
-    align-items: center;
-}
-
-#current .left_card .rainChance img {
-    margin-right: 10px;
-}
-
-#current .center_card {
-    background: rgb(234 234 234 / 0.4);
-    backdrop-filter: blur(20px);
-    border: 2px solid #DCDCDC;
-    border-radius: 25px;
-    margin: 0 50px;
-    width: 400px;
-    height: 250px;
-    padding: 20px 13px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#current .center_card h2 {
-    font-family: "Bahnschrift";
-}
-
-#current .center_card p {
-    font-family: "Bahnschrift";
-}
-
-#current .right_card {
-    background: rgb(234 234 234 / 0.4);
-    backdrop-filter: blur(20px);
-    border: 2px solid #DCDCDC;
-    border-radius: 25px;
-    width: 250px;
-    height: 250px;
-    padding: 20px 13px;
-}
-
-#current .right_card h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-family: "Bahnschrift";
-}
-
-#current .right_card .windSpeed {
-    display: flex;
-    align-items: center;
-    margin-left: 12px;
-}
-
-#current .right_card .windSpeed img {
-    margin-right: 10px;
-}
-
-#current .right_card .windSpeed h3 {
-    font-size: 17px;
-    font-family: "Bahnschrift";
-}
-
-#current .right_card .windDir {
-    display: flex;
-    align-items: center;
-    margin-top: 35px;
-    margin-left: 12px;
-}
-
-#current .right_card .windDir img {
-    margin-right: 10px;
-}
-
-#current .right_card .windDir h3 {
-    font-size: 17px;
-}
-
-#current .line {
-    border-radius: 25px;
-    background: #001B5E;
-    width: 100%;
-    height: 3px;
-    margin: 20px 0;
-}
-
-#currentNext {
-    margin-top: 30px;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-}
-
-#currentNext .conteiner .nextDay .line {
-    border-radius: 25px;
-    background: #001B5E;
-    width: 100%;
-    height: 3px;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#currentNext .conteiner {
-    display: flex;
-    align-items: center;
-}
-
-#currentNext .conteiner .nextDay {
-    background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);
-    backdrop-filter: blur(20px);
-    border: 2px solid #DCDCDC;
-    border-radius: 25px;
-    width: 400px;
-    height: 250px;
-    padding: 15px 13px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 25px;
-}
-
-#currentNext .conteiner .nextDay h1 {
-    font-size: 23px;
-    margin-top: 5px;
-}
-
-#currentNext .conteiner .nextDay .weather {
-    display: flex;
-    width: 100%;
-    height: 180px;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 10px;
-}
-
-#currentNext .conteiner .nextDay .weather img {
-    width: 35%;
-}
-
-#currentNext .conteiner .nextDay .weather h3 {
-    font-size: 35px;
-    margin: 15px 0;
-}
-
-#currentNext .conteiner .nextDay .astro {
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-#currentNext .conteiner .nextDay .astro .line {
-    border-radius: 25px;
-    background: #001B5E;
-    width: 12%;
-    transform: rotate(90deg);
-    height: 3px;
-    margin: 20px 0;
-}
-
-#currentNext .conteiner .nextDay .astro .sunrise {
-    display: flex;
-    align-items: center;
-    width: 50%;
-}
-
-#currentNext .conteiner .nextDay .astro .sunrise img {
-    width: 25%;
-    margin-right: 30px;
-    margin-left: 10px;
-}
-
-#currentNext .conteiner .nextDay .astro .sunrise h2 {
-    font-size: 18px;
-}
-
-#currentNext .conteiner .nextDay .astro .sunset {
-    width: 50%;
-    display: flex;
-    align-items: center;
-}
-
-#currentNext .conteiner .nextDay .astro .sunset img {
-    width: 25%;
-    margin-right: 30px;
-    margin-left: 10px;
-}
-
-#currentNext .conteiner .nextDay .astro .sunset h2 {
-    font-size: 18px;
-}
 
 
 /* ==========================================================================
