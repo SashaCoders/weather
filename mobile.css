@@ -690,284 +690,6 @@ body {
 }
 
 
-/*!* ==========================================================================*/
-/*   КРАСИВАЯ АДАПТАЦИЯ ПОД IPHONE (СТИЛЬ КАРТИНКИ С СОХРАНЕНИЕМ ВСЕХ ФУНКЦИЙ)*/
-/*   ========================================================================== *!*/
-
-/*@media (max-width: 480px) {*/
-/*    .main {*/
-/*        padding: 0 16px; !* Отступы от краев экрана смартфона *!*/
-/*    }*/
-
-/*    !* --- Шапка в стиле iOS --- *!*/
-/*    .header {*/
-/*        flex-direction: column;*/
-/*        align-items: center;*/
-/*        gap: 12px;*/
-/*        margin-top: 20px;*/
-/*        margin-bottom: 25px;*/
-/*    }*/
-
-/*    !* Поисковик не пропадает, а становится аккуратной полосой *!*/
-/*    .header #search {*/
-/*        margin-right: 0;*/
-/*        width: 100%;*/
-/*        max-width: 100%;*/
-/*    }*/
-/*    .header #search #name-filter {*/
-/*        height: 44px;*/
-/*        border-radius: 14px;*/
-/*        font-size: 17px;*/
-/*        background: rgba(217, 217, 217, 0.2);*/
-/*    }*/
-/*    .header #search #name-filter::placeholder {*/
-/*        font-size: 16px;*/
-/*    }*/
-
-/*    !* Выбор города встает под поиском на всю ширину *!*/
-/*    #city {*/
-/*        width: 100%;*/
-/*        max-width: 100%;*/
-/*        height: 44px;*/
-/*        border-radius: 14px;*/
-/*        font-size: 17px;*/
-/*        padding: 10px 15px;*/
-/*        background: rgba(217, 217, 217, 0.2);*/
-/*    }*/
-
-/*    !* --- Сетка блоков (Превращаем в Grid как на iPhone) --- *!*/
-/*    #current {*/
-/*        display: grid;*/
-/*        grid-template-columns: 1fr 1fr; !* Ровно 2 колонки для виджетов *!*/
-/*        gap: 14px;*/
-/*        width: 100%;*/
-/*    }*/
-
-/*    !* Центральная карточка (WEATHER DATA) становится во всю ширину сверху *!*/
-/*    #current .center_card {*/
-/*        grid-column: span 2;*/
-/*        order: -1; !* Выталкиваем на самый верх *!*/
-/*        width: 100%;*/
-/*        height: 160px;*/
-/*        margin: 0;*/
-/*        padding: 20px;*/
-/*        align-items: flex-start;*/
-/*        justify-content: center;*/
-/*        position: relative;*/
-/*    }*/
-/*    #current .center_card h2 {*/
-/*        font-size: 32px;*/
-/*        font-weight: 500;*/
-/*        margin-bottom: 4px;*/
-/*    }*/
-/*    #current .center_card p {*/
-/*        font-size: 14px;*/
-/*        color: rgba(255, 255, 255, 0.7);*/
-/*    }*/
-/*    #current .center_card img {*/
-/*        position: absolute;*/
-/*        right: 20px;*/
-/*        top: 50%;*/
-/*        transform: translateY(-50%);*/
-/*        width: 85px;*/
-/*        height: 85px;*/
-/*    }*/
-
-/*    !* Левая карточка (RAIN CHANCE + текущие градусы) *!*/
-/*    #current .left_card {*/
-/*        width: 100%;*/
-/*        height: 145px;*/
-/*        margin: 0;*/
-/*        padding: 15px;*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        justify-content: space-between;*/
-/*    }*/
-/*    #current .left_card h1 {*/
-/*        font-size: 13px;*/
-/*        color: rgba(255, 255, 255, 0.6);*/
-/*        letter-spacing: 0.5px;*/
-/*        margin-bottom: 0;*/
-/*    }*/
-/*    !* Градусы аккуратно уменьшаем под размер виджета *!*/
-/*    #current .left_card .temp h3 {*/
-/*        font-size: 38px;*/
-/*        margin-bottom: 0;*/
-/*        line-height: 1;*/
-/*    }*/
-/*    #current .left_card .line {*/
-/*        background: rgba(255, 255, 255, 0.2);*/
-/*        height: 1px;*/
-/*        margin: 8px 0;*/
-/*    }*/
-/*    #current .left_card .rainChance {*/
-/*        font-size: 14px;*/
-/*    }*/
-/*    #current .left_card .rainChance img {*/
-/*        width: 18px;*/
-/*        height: 18px;*/
-/*        margin-right: 6px;*/
-/*    }*/
-/*    #current .left_card .rainChance h3 {*/
-/*        font-size: 14px;*/
-/*    }*/
-
-/*    !* Правая карточка (WIND + направление + стрелочка) *!*/
-/*    #current .right_card {*/
-/*        width: 100%;*/
-/*        height: 145px;*/
-/*        margin: 0;*/
-/*        padding: 15px;*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        justify-content: space-between;*/
-/*    }*/
-/*    #current .right_card h1 {*/
-/*        font-size: 13px;*/
-/*        color: rgba(255, 255, 255, 0.6);*/
-/*        letter-spacing: 0.5px;*/
-/*        margin-bottom: 0;*/
-/*    }*/
-/*    #current .right_card .line {*/
-/*        background: rgba(255, 255, 255, 0.2);*/
-/*        height: 1px;*/
-/*        margin: 8px 0;*/
-/*    }*/
-/*    #current .right_card .windSpeed {*/
-/*        margin-left: 0;*/
-/*    }*/
-/*    #current .right_card .windSpeed img {*/
-/*        width: 20px;*/
-/*        height: 20px;*/
-/*        margin-right: 8px;*/
-/*    }*/
-/*    #current .right_card .windSpeed h3 {*/
-/*        font-size: 15px;*/
-/*    }*/
-/*    !* Блок направления ветра со стрелочкой (Сохранен!) *!*/
-/*    #current .right_card .windDir {*/
-/*        margin-top: 0;*/
-/*        margin-left: 0;*/
-/*    }*/
-/*    #current .right_card .windDir img {*/
-/*        width: 20px;*/
-/*        height: 20px;*/
-/*        margin-right: 8px;*/
-/*    }*/
-/*    #current .right_card .windDir h3 {*/
-/*        font-size: 14px;*/
-/*    }*/
-
-
-/*    !* --- Блок прогноза на 3 дня (Красивая сплошная стеклянная плашка) --- *!*/
-/*    #currentNext {*/
-/*        margin-top: 20px;*/
-/*        width: 100%;*/
-/*        background: rgb(234 234 234 / 0.4);*/
-/*        backdrop-filter: blur(20px);*/
-/*        border: 2px solid #DCDCDC;*/
-/*        border-radius: 24px;*/
-/*        padding: 20px 15px;*/
-/*    }*/
-/*    !* Добавляем заголовок секции сверху плашки *!*/
-/*    #currentNext::before {*/
-/*        content: "THREE DAY FORECAST";*/
-/*        font-family: "Bahnschrift";*/
-/*        font-size: 13px;*/
-/*        color: rgba(255, 255, 255, 0.6);*/
-/*        align-self: flex-start;*/
-/*        margin-bottom: 15px;*/
-/*        padding-left: 5px;*/
-/*    }*/
-
-/*    #currentNext .conteiner {*/
-/*        display: flex;*/
-/*        flex-direction: row; !* Дни выстраиваются в ряд *!*/
-/*        justify-content: space-between;*/
-/*        align-items: flex-start;*/
-/*        width: 100%;*/
-/*        gap: 8px;*/
-/*    }*/
-
-/*    #currentNext .conteiner .nextDay {*/
-/*        background: none; !* Убираем тройные вложенные рамки *!*/
-/*        backdrop-filter: none;*/
-/*        border: none;*/
-/*        width: 32%; !* Распределяем ровно на 3 колонки *!*/
-/*        height: auto;*/
-/*        padding: 0;*/
-/*        margin: 0;*/
-/*    }*/
-/*    #currentNext .conteiner .nextDay h1 {*/
-/*        font-size: 15px;*/
-/*        margin-top: 0;*/
-/*        font-weight: 600;*/
-/*    }*/
-
-/*    !* Погода внутри колонок дней *!*/
-/*    #currentNext .conteiner .nextDay .weather {*/
-/*        flex-direction: column; !* Элементы внутри дня сверху вниз *!*/
-/*        height: auto;*/
-/*        margin-top: 8px;*/
-/*        gap: 4px;*/
-/*    }*/
-/*    #currentNext .conteiner .nextDay .weather img {*/
-/*        width: 44px;*/
-/*        height: 44px;*/
-/*    }*/
-/*    #currentNext .conteiner .nextDay .weather h3 {*/
-/*        font-size: 16px;*/
-/*        margin: 4px 0;*/
-/*        text-align: center;*/
-/*    }*/
-/*    #currentNext .conteiner .nextDay .weather div h3:last-child {*/
-/*        font-size: 12px;*/
-/*        color: rgba(255, 255, 255, 0.6);*/
-/*    }*/
-
-/*    #currentNext .conteiner .nextDay .line {*/
-/*        background: rgba(255, 255, 255, 0.2);*/
-/*        height: 1px;*/
-/*        margin: 10px 0;*/
-/*    }*/
-
-/*    !* --- Восход и Заход солнца (Полностью сохранены и адаптированы!) --- *!*/
-/*    #currentNext .conteiner .nextDay .astro {*/
-/*        flex-direction: column; !* Внутри узкой колонки дня ставим их друг под друга *!*/
-/*        gap: 8px;*/
-/*        align-items: center;*/
-/*    }*/
-/*    !* Скрываем внутреннюю палочку-разделитель, так как блоки теперь вертикальные *!*/
-/*    #currentNext .conteiner .nextDay .astro .line {*/
-/*        display: none;*/
-/*    }*/
-/*    #currentNext .conteiner .nextDay .astro .sunrise,*/
-/*    #currentNext .conteiner .nextDay .astro .sunset {*/
-/*        width: 100%;*/
-/*        justify-content: center;*/
-/*        gap: 4px;*/
-/*    }*/
-/*    #currentNext .conteiner .nextDay .astro .sunrise img,*/
-/*    #currentNext .conteiner .nextDay .astro .sunset img {*/
-/*        width: 18px;*/
-/*        height: 18px;*/
-/*        margin: 0;*/
-/*    }*/
-/*    #currentNext .conteiner .nextDay .astro .sunrise h2,*/
-/*    #currentNext .conteiner .nextDay .astro .sunset h2 {*/
-/*        font-size: 11px;*/
-/*        text-align: center;*/
-/*    }*/
-/*    !* Скрываем надписи "Sunrise"/"Sunset", оставляя только время, чтобы текст не слипался *!*/
-/*    #currentNext .conteiner .nextDay .astro .sunrise h2:first-of-type,*/
-/*    #currentNext .conteiner .nextDay .astro .sunset h2:first-of-type {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
-
-
-
-
 /* ==========================================================================
    КРАСИВАЯ АДАПТАЦИЯ ПОД IPHONE (СТИЛЬ КАРТИНКИ С СОХРАНЕНИЕМ ВСЕХ ФУНКЦИЙ)
    ========================================================================== */
@@ -992,12 +714,14 @@ body {
         width: 100%;
         max-width: 100%;
     }
+
     .header #search #name-filter {
         height: 44px;
         border-radius: 14px;
         font-size: 17px;
         background: rgba(217, 217, 217, 0.2);
     }
+
     .header #search #name-filter::placeholder {
         font-size: 16px;
     }
@@ -1033,15 +757,18 @@ body {
         justify-content: center;
         position: relative;
     }
+
     #current .center_card h2 {
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 500;
         margin-bottom: 4px;
     }
+
     #current .center_card p {
         font-size: 14px;
-        color: rgba(255, 255, 255, 0.7);
+        color: white;
     }
+
     /* ИКОНКА УМЕНЬШЕНА (была 85px) */
     #current .center_card img {
         position: absolute;
@@ -1062,34 +789,40 @@ body {
         flex-direction: column;
         justify-content: space-between;
     }
+
     #current .left_card h1 {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 10px;
+        /*color: rgba(255, 255, 255, 0.6);*/
         letter-spacing: 0.5px;
         margin-bottom: 0;
     }
+
     /* Градусы аккуратно уменьшаем под размер виджета */
     #current .left_card .temp h3 {
-        font-size: 38px;
+        font-size: 30px;
         margin-bottom: 0;
         line-height: 1;
     }
+
     #current .left_card .line {
-        background: rgba(255, 255, 255, 0.2);
+        background:#001B5E;
         height: 1px;
         margin: 8px 0;
     }
+
     #current .left_card .rainChance {
         font-size: 14px;
     }
+
     /* ИКОНКА КАПЛИ УМЕНЬШЕНА (была 18px) */
     #current .left_card .rainChance img {
-        width: 13px;
-        height: 13px;
+        width: 20px;
+        height: 20px;
         margin-right: 6px;
     }
+
     #current .left_card .rainChance h3 {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     /* Правая карточка (WIND + направление + стрелочка) */
@@ -1102,42 +835,50 @@ body {
         flex-direction: column;
         justify-content: space-between;
     }
+
     #current .right_card h1 {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 10px;
+        color:white;
         letter-spacing: 0.5px;
         margin-bottom: 0;
     }
+
     #current .right_card .line {
-        background: rgba(255, 255, 255, 0.2);
+        background: #001B5E;
         height: 1px;
         margin: 8px 0;
     }
+
     #current .right_card .windSpeed {
         margin-left: 0;
     }
+
     /* ИКОНКА ВЕТРА УМЕНЬШЕНА (была 20px) */
     #current .right_card .windSpeed img {
-        width: 14px;
-        height: 14px;
+        width: 20px;
+        height: 20px;
         margin-right: 8px;
     }
+
     #current .right_card .windSpeed h3 {
-        font-size: 15px;
+        font-size: 10px;
     }
+
     /* Блок направления ветра со стрелочкой (Сохранен!) */
     #current .right_card .windDir {
         margin-top: 0;
         margin-left: 0;
     }
+
     /* ИКОНКА СТРЕЛКИ НАПРАВЛЕНИЯ УМЕНЬШЕНА (была 20px) */
     #current .right_card .windDir img {
-        width: 13px;
-        height: 13px;
+        width: 20px;
+        height: 20px;
         margin-right: 8px;
     }
+
     #current .right_card .windDir h3 {
-        font-size: 14px;
+        font-size: 10px;
     }
 
 
@@ -1145,18 +886,21 @@ body {
     #currentNext {
         margin-top: 20px;
         width: 100%;
-        background: rgb(234 234 234 / 0.4);
+        /*background: rgb(234 234 234 / 0.4);*/
+        background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);
         backdrop-filter: blur(20px);
         border: 2px solid #DCDCDC;
         border-radius: 24px;
         padding: 20px 15px;
     }
+
     /* Добавляем заголовок секции сверху плашки */
     #currentNext::before {
         content: "THREE DAY FORECAST";
         font-family: "Bahnschrift";
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 10px;
+        color: white;
+        text-shadow: 1px 3px 4px rgb(28 24 76 / 0.75);
         align-self: flex-start;
         margin-bottom: 15px;
         padding-left: 5px;
@@ -1180,6 +924,7 @@ body {
         padding: 0;
         margin: 0;
     }
+
     #currentNext .conteiner .nextDay h1 {
         font-size: 15px;
         margin-top: 0;
@@ -1193,23 +938,26 @@ body {
         margin-top: 8px;
         gap: 4px;
     }
+
     /* ИКОНКИ ПОГОДЫ В ПРОГНОЗЕ УМЕНЬШЕНЫ (были 44px) */
     #currentNext .conteiner .nextDay .weather img {
         width: 32px;
         height: 32px;
     }
+
     #currentNext .conteiner .nextDay .weather h3 {
         font-size: 16px;
         margin: 4px 0;
         text-align: center;
     }
+
     #currentNext .conteiner .nextDay .weather div h3:last-child {
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 15px;
+        color:white;
     }
 
     #currentNext .conteiner .nextDay .line {
-        background: rgba(255, 255, 255, 0.2);
+        background: #001B5E;
         height: 1px;
         margin: 10px 0;
     }
@@ -1220,28 +968,33 @@ body {
         gap: 8px;
         align-items: center;
     }
+
     /* Скрываем внутреннюю палочку-разделитель, так как blocks теперь вертикальные */
     #currentNext .conteiner .nextDay .astro .line {
         display: none;
     }
+
     #currentNext .conteiner .nextDay .astro .sunrise,
     #currentNext .conteiner .nextDay .astro .sunset {
         width: 100%;
         justify-content: center;
         gap: 4px;
     }
+
     /* ИКОНКИ СОЛНЦА УМЕНЬШЕНЫ (были 18px) */
     #currentNext .conteiner .nextDay .astro .sunrise img,
     #currentNext .conteiner .nextDay .astro .sunset img {
-        width: 13px;
-        height: 13px;
+        width: 20px;
+        height: 20px;
         margin: 0;
     }
+
     #currentNext .conteiner .nextDay .astro .sunrise h2,
     #currentNext .conteiner .nextDay .astro .sunset h2 {
         font-size: 11px;
         text-align: center;
     }
+
     /* Скрываем надписи "Sunrise"/"Sunset", оставляя только время, чтобы текст не слипался */
     #currentNext .conteiner .nextDay .astro .sunrise h2:first-of-type,
     #currentNext .conteiner .nextDay .astro .sunset h2:first-of-type {

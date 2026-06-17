@@ -60,7 +60,7 @@ function createDayForecastHTML(dayData) {
                     <h3>${dayData.day.avgvis_km} kph</h3>
                 </div>
             </div>
-            <div class="line">-</div>
+            <div class="line"></div>
             <div class="astro">
                 <div class="sunrise">
                     <img src="img/sunrise.png">
