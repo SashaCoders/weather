@@ -15,21 +15,12 @@ html {
 }
 
 body {
-    /*background: url("img/page_main.svg");*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: center center;*/
-    /*background-size: cover;*/
-    /*background-attachment: fixed;*/
-    /*height: 100vh;*/
-
     background: url("img/page_main.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-
-    /* ИСПРАВЛЕНИЕ ТУТ: */
-    height: auto;        /* Убираем жесткие 100vh */
+    height: auto;
     min-height: 100vh;
 
 }
@@ -65,14 +56,11 @@ body {
     height: 45px;
     line-height: 28px;
     padding: 10px 15px 10px 1.5rem;
-
-
     border: 1px solid rgba(255, 255, 255, .4);
     border-radius: 25px;
     background: rgba(217, 217, 217, .35);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
     color: white;
     font-size: 20px;
     outline: none;
@@ -111,19 +99,15 @@ body {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
     border: 1px solid rgba(255, 255, 255, .4);
     border-radius: 25px;
     background: rgba(217, 217, 217, .35);
     backdrop-filter: blur(20px);
-
     width: 230px;
     padding: 10px 40px 10px 15px;
-
     color: white;
     font-size: 20px;
     cursor: pointer;
-
 }
 
 #city option {
@@ -228,7 +212,6 @@ body {
 #current .right_card .windSpeed h3 {
     font-size: 17px;
     font-family: "Bahnschrift";
-
 }
 
 #current .right_card .windDir {
@@ -372,11 +355,6 @@ body {
     }
 
     body {
-        /*background-attachment: scroll !important;*/
-        /*background-size: cover;*/
-        /*min-height: 110vh;*/
-
-      /* scroll заставит фон двигаться вместе с карточками, и он не кончится посреди страницы */
         background-attachment: scroll !important;
         background-size: cover;
         height: auto;
@@ -429,46 +407,10 @@ body {
         width: 100%;
     }
 
-
-    /*#current .center_card {*/
-    /*    grid-column: span 2;*/
-    /*    order: -1;*/
-    /*    width: 100%;*/
-    /*    height: 120px;*/
-    /*    margin: 0;*/
-    /*    padding: 20px;*/
-    /*    align-items: flex-start;*/
-    /*    justify-content: center;*/
-    /*    position: relative;*/
-
-    /*}*/
-
-    /*#current .center_card h2 {*/
-    /*    font-size: 24px;*/
-    /*    font-weight: 500;*/
-    /*    margin-bottom: 4px;*/
-    /*}*/
-
-    /*#current .center_card p {*/
-    /*    font-size: 14px;*/
-    /*    color: white;*/
-    /*}*/
-
-
-    /*#current .center_card img {*/
-    /*    position: absolute;*/
-    /*    right: 20px;*/
-    /*    top: 50%;*/
-    /*    transform: translateY(-50%);*/
-    /*    width: 60px;*/
-    /*    height: 60px;*/
-    /*}*/
 #current .center_card {
         grid-column: span 2;
         order: -1;
         width: 100%;
-        /* Меняем фиксированные 120px на min-height, чтобы карточка могла растянуться вниз, */
-        /* если длинный текст перенесется на 2-3 строки */
         height: auto;
         min-height: 120px;
         margin: 0;
@@ -482,17 +424,14 @@ body {
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 4px;
-
-        /* КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ: */
-        white-space: normal;       /* Разрешаем перенос слов */
-        max-width: calc(100% - 75px); /* Ограничиваем ширину текста (100% минус ширина картинки с отступом) */
-        word-wrap: break-word;     /* На всякий случай, чтобы длинные слова не резали экран */
+        white-space: normal;
+        max-width: calc(100% - 75px);
+        word-wrap: break-word;
     }
 
     #current .center_card p {
         font-size: 14px;
         color: white;
-        /* Ограничиваем и дату, чтобы она тоже не уехала под картинку */
         max-width: calc(100% - 75px);
     }
 
@@ -610,7 +549,6 @@ body {
     #currentNext {
         margin-top: 20px;
         width: 100%;
-
         background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);
         backdrop-filter: blur(20px);
         border: 2px solid #DCDCDC;

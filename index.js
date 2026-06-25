@@ -82,8 +82,6 @@ function updateWeather() {
         .then(res => res.json())
         .then(data => {
             console.log("Weather Data:", data);
-
-            // 1. Рендеримо поточну погоду (Верхня частина)
             const currentState = data.current.condition.text;
             const weatherDataIcon = getWeatherIcon(currentState);
 
