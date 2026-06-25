@@ -1,14 +1,12 @@
-// --- ЕЛЕМЕНТИ DOM ---
+
 const currents = document.getElementById('current');
 const currentNext = document.getElementById('currentNext');
 const city = document.getElementById('city');
 const nameFilter = document.getElementById("name-filter");
 
+
 const API_KEY = 'd9f9d6d297d14631bd5133321262905';
 
-// --- ВСЕОБХІДНІ ФУНКЦІЇ ---
-
-// Універсальна функція для підбору іконки за текстом стану погоди
 function getWeatherIcon(stateText) {
     const state = stateText.toLowerCase();
 
@@ -31,23 +29,14 @@ function getWeatherIcon(stateText) {
     if (state.includes("sleet") || state.includes("drizzle")) return 'sleet.png';
     if (state.includes("partly") && state.includes("cloudy")) return 'partly_cloudy.png';
 
-    return 'sun.png'; // Дефолтна іконка, якщо нічого не підійшло
+    return 'sun.png';
 }
 
-// Функція для підбору іконки напрямку вітру
-function getWindArrow(dir) {
-    if (dir.includes("NE")) return 'arrowNE.png';
-    if (dir.includes("NW")) return 'arrowNW.png';
-    if (dir.includes("SW")) return 'arrowSW.png';
-    if (dir.includes("SE")) return 'arrowSE.png';
-    if (dir.includes("N")) return 'arrowN.png';
-    if (dir.includes("W")) return 'arrowW.png';
-    if (dir.includes("E")) return 'arrowE.png';
-    if (dir.includes("S")) return 'arrowS.png';
-    return 'arrowN.png';
+function getWindArrow(deg) {
+   let windIcon = document.getElementById('windDeg');
+windIcon.style.transform = `rotate(${deg}deg)`;
 }
 
-// Шаблон для одного дня в прогнозі (щоб не дублювати HTML)
 function createDayForecastHTML(dayData) {
     const icon = getWeatherIcon(dayData.day.condition.text);
     return `
@@ -82,12 +71,11 @@ function createDayForecastHTML(dayData) {
     `;
 }
 
-// --- ГОЛОВНА ФУНКЦІЯ ОТРЫМАННЯ ПОГОДИ ---
+
 function updateWeather() {
     const town = city.value;
     if (!town) return;
 
-    // Об'єднуємо запити в один (прогноз на 3 дні вже включає в себе поточну погоду current)
     const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${town}&days=3&aqi=no&alerts=no`;
 
     fetch(url)
@@ -98,7 +86,7 @@ function updateWeather() {
             // 1. Рендеримо поточну погоду (Верхня частина)
             const currentState = data.current.condition.text;
             const weatherDataIcon = getWeatherIcon(currentState);
-            const windyDirIcon = getWindArrow(data.current.wind_dir);
+
 
             currents.innerHTML = `
                 <div class="left_card">
@@ -133,7 +121,7 @@ function updateWeather() {
                     </div>
                     <div class="line"></div>
                     <div class="windDir">
-                        <img src="img/${windyDirIcon}">
+                        <img id="windDeg" src="img/ArrowWindDir.png">
                         <div class="cont">
                             <h3>Wind direction</h3>
                             <h3>${data.current.wind_dir}</h3>
@@ -141,8 +129,8 @@ function updateWeather() {
                     </div>
                 </div>
             `;
+  getWindArrow(data.current.wind_degree);
 
-            // 2. Рендеримо прогноз на 3 дні (Нижня частина)
             const forecastDays = data.forecast.forecastday;
             currentNext.innerHTML = `
                 <div class="conteiner">
@@ -153,12 +141,10 @@ function updateWeather() {
         .catch(err => console.error("Помилка завантаження погоди:", err));
 }
 
-// --- СЛУХАЧІ ПОДІЙ (EVENTS) ---
 
-// Оновлюємо погоду при зміні міста
 city.addEventListener('change', updateWeather);
 
-// Фільтр міст (Пошук)
+
 nameFilter.addEventListener('input', function() {
     const filterValue = this.value.toLowerCase();
     let firstVisibleOption = null;
@@ -177,15 +163,14 @@ nameFilter.addEventListener('input', function() {
         }
     }
 
-    // Якщо поточне вибране місто сховане фільтром, перемикаємо на перше доступне
+
     if (firstVisibleOption && city.selectedOptions[0].style.display === "none") {
         city.value = firstVisibleOption.value;
-        updateWeather(); // Викликаємо оновлення погоди для нового міста
+        updateWeather();
     }
 });
 
-// Перший запуск при завантаженні сторінки
 updateWeather();
 
-// Інтервал оновлення ставимо на 15 хвилин (900000 мс), щоб не спамити API
+
 setInterval(updateWeather, 900000);
