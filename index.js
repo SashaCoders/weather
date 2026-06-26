@@ -7,12 +7,6 @@ const nameFilter = document.getElementById("name-filter");
 
 const API_KEY = 'd9f9d6d297d14631bd5133321262905';
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
 function getWeatherIcon(stateText) {
     const state = stateText.toLowerCase();
 
@@ -38,28 +32,9 @@ function getWeatherIcon(stateText) {
     return 'sun.png';
 }
 
-<<<<<<< HEAD
-
-function getWindArrow(dir) {
-    if (dir.includes("NE")) return 'arrowNE.png';
-    if (dir.includes("NW")) return 'arrowNW.png';
-    if (dir.includes("SW")) return 'arrowSW.png';
-    if (dir.includes("SE")) return 'arrowSE.png';
-    if (dir.includes("N")) return 'arrowN.png';
-    if (dir.includes("W")) return 'arrowW.png';
-    if (dir.includes("E")) return 'arrowE.png';
-    if (dir.includes("S")) return 'arrowS.png';
-    return 'arrowN.png';
-}
-
-
-
-
-
-=======
 function getWindArrow(deg) {
-   let windIcon = document.getElementById('windDeg');
-windIcon.style.transform = `rotate(${deg}deg)`;
+    let windIcon = document.getElementById('windDeg');
+    windIcon.style.transform = `rotate(${deg}deg)`;
 }
 
 function createDayForecastHTML(dayData) {
@@ -97,25 +72,16 @@ function createDayForecastHTML(dayData) {
 }
 
 
->>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
 function updateWeather() {
     const town = city.value;
     if (!town) return;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${town}&days=3&aqi=no&alerts=no`;
 
     fetch(url)
         .then(res => res.json())
         .then(data => {
             console.log("Weather Data:", data);
-<<<<<<< HEAD
-
-=======
->>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
             const currentState = data.current.condition.text;
             const weatherDataIcon = getWeatherIcon(currentState);
 
@@ -161,12 +127,8 @@ function updateWeather() {
                     </div>
                 </div>
             `;
-  getWindArrow(data.current.wind_degree);
+            getWindArrow(data.current.wind_degree);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
             const forecastDays = data.forecast.forecastday;
             currentNext.innerHTML = `
                 <div class="conteiner">
@@ -177,10 +139,7 @@ function updateWeather() {
         .catch(err => console.error("Помилка завантаження погоди:", err));
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
 city.addEventListener('change', updateWeather);
 
 
@@ -209,42 +168,6 @@ nameFilter.addEventListener('input', function() {
     }
 });
 
-<<<<<<< HEAD
-function createDayForecastHTML(dayData) {
-    const icon = getWeatherIcon(dayData.day.condition.text);
-    return `
-        <div class="nextDay">
-            <h1>${dayData.date}</h1>
-            <div class="weather">
-                <img src="img/${icon}">
-                <div>
-                    <h3>${dayData.day.avgtemp_c} °C</h3>
-                    <h3>${dayData.day.avgvis_km} kph</h3>
-                </div>
-            </div>
-            <div class="line">-</div>
-            <div class="astro">
-                <div class="sunrise">
-                    <img src="img/sunrise.png">
-                    <div>
-                        <h2>Sunrise</h2>
-                        <h2>${dayData.astro.sunrise}</h2>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <div class="sunset">
-                    <img src="img/sunset.png">
-                    <div>
-                        <h2>Sunset</h2>
-                        <h2>${dayData.astro.sunset}</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-=======
->>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
 updateWeather();
 
 
