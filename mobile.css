@@ -9,6 +9,10 @@ h1, h2, h3, p {
     text-shadow: 1px 3px 4px rgb(28 24 76 / 0.75);
 }
 
+html {
+    height: auto;
+    min-height: 100vh;
+}
 
 body {
     background: url("img/page_main.svg");
@@ -16,7 +20,9 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
+
 }
 
 .main {
@@ -50,14 +56,11 @@ body {
     height: 45px;
     line-height: 28px;
     padding: 10px 15px 10px 1.5rem;
-
-
     border: 1px solid rgba(255, 255, 255, .4);
     border-radius: 25px;
     background: rgba(217, 217, 217, .35);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
     color: white;
     font-size: 20px;
     outline: none;
@@ -96,20 +99,15 @@ body {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
     border: 1px solid rgba(255, 255, 255, .4);
     border-radius: 25px;
     background: rgba(217, 217, 217, .35);
     backdrop-filter: blur(20px);
-
     width: 230px;
     padding: 10px 40px 10px 15px;
-
     color: white;
     font-size: 20px;
     cursor: pointer;
-
-    /*box-shadow: 0 0 15px rgba(255,255,255,.15);*/
 }
 
 #city option {
@@ -138,7 +136,7 @@ body {
     font-size: 20px;
     margin-bottom: 20px;
     font-family: "Bahnschrift";
-    /*text-shadow: 1px 3px 4px 0 rgb(28 24 76 / 0.75);*/
+
 }
 
 #current .left_card .temp h3 {
@@ -178,7 +176,11 @@ body {
 
 #current .center_card h2 {
     font-family: "Bahnschrift";
+<<<<<<< HEAD
     text-align: center;
+=======
+    float: right;
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
 }
 
 #current .center_card p {
@@ -214,7 +216,6 @@ body {
 #current .right_card .windSpeed h3 {
     font-size: 17px;
     font-family: "Bahnschrift";
-
 }
 
 #current .right_card .windDir {
@@ -224,9 +225,11 @@ body {
     margin-left: 12px;
 }
 
-#current .right_card .windDir img {
+#current .right_card .windDir #windDeg {
     margin-right: 10px;
+    transform: rotate(0);
 }
+
 
 #current .right_card .windDir h3 {
     font-size: 16px;
@@ -267,7 +270,6 @@ body {
 }
 
 #currentNext .conteiner .nextDay {
-    /*background: rgb(234 234 234 / 0.4);*/
     background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);
     backdrop-filter: blur(20px);
     border: 2px solid #DCDCDC;
@@ -359,9 +361,14 @@ body {
     body {
         background-attachment: scroll !important;
         background-size: cover;
-        min-height: 110vh;
+        height: auto;
+        min-height: 100vh;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     .header {
         flex-direction: column;
         align-items: center;
@@ -407,12 +414,17 @@ body {
         width: 100%;
     }
 
+<<<<<<< HEAD
 
     #current .center_card {
+=======
+#current .center_card {
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
         grid-column: span 2;
         order: -1;
         width: 100%;
-        height: 120px;
+        height: auto;
+        min-height: 120px;
         margin: 0;
         padding: 20px;
         align-items: flex-start;
@@ -424,15 +436,25 @@ body {
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 4px;
+<<<<<<< HEAD
         text-align: center;
+=======
+        white-space: normal;
+        max-width: calc(100% - 75px);
+        word-wrap: break-word;
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     }
 
     #current .center_card p {
         font-size: 14px;
         color: white;
+        max-width: calc(100% - 75px);
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     #current .center_card img {
         position: absolute;
         right: 20px;
@@ -442,6 +464,10 @@ body {
         height: 60px;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     #current .left_card {
         width: 100%;
         height: 145px;
@@ -514,7 +540,10 @@ body {
         margin-left: 0;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     #current .right_card .windSpeed img {
         width: 20px;
         height: 20px;
@@ -539,10 +568,6 @@ body {
         background-img: #001B5E;
     }
 
-    #current .right_card .windDir img {
-
-    }
-
     #current .right_card .windDir h3 {
         font-size: 10px;
     }
@@ -551,7 +576,10 @@ body {
     #currentNext {
         margin-top: 20px;
         width: 100%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
         background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);
         backdrop-filter: blur(20px);
         border: 2px solid #DCDCDC;
@@ -559,7 +587,10 @@ body {
         padding: 20px 15px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     #currentNext::before {
         content: "THREE DAY FORECAST";
         font-family: "Bahnschrift";
@@ -596,7 +627,10 @@ body {
         font-weight: 600;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     #currentNext .conteiner .nextDay .weather {
         flex-direction: column;
         height: auto;
@@ -604,7 +638,10 @@ body {
         gap: 4px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     #currentNext .conteiner .nextDay .weather img {
         width: 32px;
         height: 32px;
@@ -635,7 +672,10 @@ body {
         align-items: center;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
     #currentNext .conteiner .nextDay .astro .line {
         display: none;
     }

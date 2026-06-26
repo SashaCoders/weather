@@ -4,11 +4,15 @@ const currentNext = document.getElementById('currentNext');
 const city = document.getElementById('city');
 const nameFilter = document.getElementById("name-filter");
 
+
 const API_KEY = 'd9f9d6d297d14631bd5133321262905';
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
 function getWeatherIcon(stateText) {
     const state = stateText.toLowerCase();
 
@@ -34,6 +38,7 @@ function getWeatherIcon(stateText) {
     return 'sun.png';
 }
 
+<<<<<<< HEAD
 
 function getWindArrow(dir) {
     if (dir.includes("NE")) return 'arrowNE.png';
@@ -51,102 +56,11 @@ function getWindArrow(dir) {
 
 
 
-function updateWeather() {
-    const town = city.value;
-    if (!town) return;
-
-
-    const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${town}&days=3&aqi=no&alerts=no`;
-
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            console.log("Weather Data:", data);
-
-            const currentState = data.current.condition.text;
-            const weatherDataIcon = getWeatherIcon(currentState);
-            const windyDirIcon = getWindArrow(data.current.wind_dir);
-
-            currents.innerHTML = `
-                <div class="left_card">
-                    <h1>CURRENT WEATHER</h1>
-                    <div class="temp">
-                        <h3>${data.current.temp_c} °C</h3>
-                    </div>
-                    <div class="line"></div>
-                    <div class="rainChance">
-                        <img src="img/umbrella.png" alt="">
-                        <div class="cont"> 
-                            <h3>Rain chance</h3>
-                            <h3>${data.current.humidity} %</h3>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="center_card">
-                    <img src="img/${weatherDataIcon}">
-                    <h2>${currentState}</h2>
-                    <p class="data">Today ${data.current.last_updated}</p>
-                </div>
-                
-                <div class="right_card">
-                    <h1>WIND</h1>
-                    <div class="windSpeed">
-                        <img src="img/windy.png" alt="">
-                        <div class="cont"> 
-                            <h3>Wind speed</h3>
-                            <h3>${data.current.wind_kph} kph</h3>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="windDir">
-                        <img src="img/${windyDirIcon}">
-                        <div class="cont">
-                            <h3>Wind direction</h3>
-                            <h3>${data.current.wind_dir}</h3>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-
-            const forecastDays = data.forecast.forecastday;
-            currentNext.innerHTML = `
-                <div class="conteiner">
-                    ${forecastDays.map(day => createDayForecastHTML(day)).join('')}
-                </div>
-            `;
-        })
-        .catch(err => console.error("Помилка завантаження погоди:", err));
+=======
+function getWindArrow(deg) {
+   let windIcon = document.getElementById('windDeg');
+windIcon.style.transform = `rotate(${deg}deg)`;
 }
-
-city.addEventListener('change', updateWeather);
-
-
-nameFilter.addEventListener('input', function() {
-    const filterValue = this.value.toLowerCase();
-    let firstVisibleOption = null;
-
-    for (let option of city.options) {
-        const cityText = option.text.toLowerCase();
-        const cityValue = option.value.toLowerCase();
-
-        if (cityText.includes(filterValue) || cityValue.includes(filterValue)) {
-            option.style.display = "";
-            if (!firstVisibleOption) {
-                firstVisibleOption = option;
-            }
-        } else {
-            option.style.display = "none";
-        }
-    }
-
-
-    if (firstVisibleOption && city.selectedOptions[0].style.display === "none") {
-        city.value = firstVisibleOption.value;
-        updateWeather();
-    }
-});
 
 function createDayForecastHTML(dayData) {
     const icon = getWeatherIcon(dayData.day.condition.text);
@@ -181,6 +95,156 @@ function createDayForecastHTML(dayData) {
         </div>
     `;
 }
+
+
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
+function updateWeather() {
+    const town = city.value;
+    if (!town) return;
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${town}&days=3&aqi=no&alerts=no`;
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            console.log("Weather Data:", data);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
+            const currentState = data.current.condition.text;
+            const weatherDataIcon = getWeatherIcon(currentState);
+
+
+            currents.innerHTML = `
+                <div class="left_card">
+                    <h1>CURRENT WEATHER</h1>
+                    <div class="temp">
+                        <h3>${data.current.temp_c} °C</h3>
+                    </div>
+                    <div class="line"></div>
+                    <div class="rainChance">
+                        <img src="img/umbrella.png" alt="">
+                        <div class="cont"> 
+                            <h3>Rain chance</h3>
+                            <h3>${data.current.humidity} %</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="center_card">
+                    <img src="img/${weatherDataIcon}">
+                    <h2>${currentState}</h2>
+                    <p class="data">Today ${data.current.last_updated}</p>
+                </div>
+                
+                <div class="right_card">
+                    <h1>WIND</h1>
+                    <div class="windSpeed">
+                        <img src="img/windy.png" alt="">
+                        <div class="cont"> 
+                            <h3>Wind speed</h3>
+                            <h3>${data.current.wind_kph} kph</h3>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="windDir">
+                        <img id="windDeg" src="img/ArrowWindDir.png">
+                        <div class="cont">
+                            <h3>Wind direction</h3>
+                            <h3>${data.current.wind_dir}</h3>
+                        </div>
+                    </div>
+                </div>
+            `;
+  getWindArrow(data.current.wind_degree);
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
+            const forecastDays = data.forecast.forecastday;
+            currentNext.innerHTML = `
+                <div class="conteiner">
+                    ${forecastDays.map(day => createDayForecastHTML(day)).join('')}
+                </div>
+            `;
+        })
+        .catch(err => console.error("Помилка завантаження погоди:", err));
+}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
+city.addEventListener('change', updateWeather);
+
+
+nameFilter.addEventListener('input', function() {
+    const filterValue = this.value.toLowerCase();
+    let firstVisibleOption = null;
+
+    for (let option of city.options) {
+        const cityText = option.text.toLowerCase();
+        const cityValue = option.value.toLowerCase();
+
+        if (cityText.includes(filterValue) || cityValue.includes(filterValue)) {
+            option.style.display = "";
+            if (!firstVisibleOption) {
+                firstVisibleOption = option;
+            }
+        } else {
+            option.style.display = "none";
+        }
+    }
+
+
+    if (firstVisibleOption && city.selectedOptions[0].style.display === "none") {
+        city.value = firstVisibleOption.value;
+        updateWeather();
+    }
+});
+
+<<<<<<< HEAD
+function createDayForecastHTML(dayData) {
+    const icon = getWeatherIcon(dayData.day.condition.text);
+    return `
+        <div class="nextDay">
+            <h1>${dayData.date}</h1>
+            <div class="weather">
+                <img src="img/${icon}">
+                <div>
+                    <h3>${dayData.day.avgtemp_c} °C</h3>
+                    <h3>${dayData.day.avgvis_km} kph</h3>
+                </div>
+            </div>
+            <div class="line">-</div>
+            <div class="astro">
+                <div class="sunrise">
+                    <img src="img/sunrise.png">
+                    <div>
+                        <h2>Sunrise</h2>
+                        <h2>${dayData.astro.sunrise}</h2>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="sunset">
+                    <img src="img/sunset.png">
+                    <div>
+                        <h2>Sunset</h2>
+                        <h2>${dayData.astro.sunset}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+=======
+>>>>>>> 3c7e89af61c847e11693e6ec8ce2e775bf16bb6e
 updateWeather();
 
 
