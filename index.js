@@ -1,4 +1,4 @@
-// --- ЕЛЕМЕНТИ DOM ---
+
 const currents = document.getElementById('current');
 const currentNext = document.getElementById('currentNext');
 const city = document.getElementById('city');
@@ -6,9 +6,9 @@ const nameFilter = document.getElementById("name-filter");
 
 const API_KEY = 'd9f9d6d297d14631bd5133321262905';
 
-// --- ВСЕОБХІДНІ ФУНКЦІЇ ---
 
-// Універсальна функція для підбору іконки за текстом стану погоди
+
+
 function getWeatherIcon(stateText) {
     const state = stateText.toLowerCase();
 
@@ -31,10 +31,10 @@ function getWeatherIcon(stateText) {
     if (state.includes("sleet") || state.includes("drizzle")) return 'sleet.png';
     if (state.includes("partly") && state.includes("cloudy")) return 'partly_cloudy.png';
 
-    return 'sun.png'; // Дефолтна іконка, якщо нічого не підійшло
+    return 'sun.png';
 }
 
-// Функція для підбору іконки напрямку вітру
+
 function getWindArrow(dir) {
     if (dir.includes("NE")) return 'arrowNE.png';
     if (dir.includes("NW")) return 'arrowNW.png';
@@ -47,47 +47,15 @@ function getWindArrow(dir) {
     return 'arrowN.png';
 }
 
-// Шаблон для одного дня в прогнозі (щоб не дублювати HTML)
-function createDayForecastHTML(dayData) {
-    const icon = getWeatherIcon(dayData.day.condition.text);
-    return `
-        <div class="nextDay">
-            <h1>${dayData.date}</h1>
-            <div class="weather">
-                <img src="img/${icon}">
-                <div>
-                    <h3>${dayData.day.avgtemp_c} °C</h3>
-                    <h3>${dayData.day.avgvis_km} kph</h3>
-                </div>
-            </div>
-            <div class="line">-</div>
-            <div class="astro">
-                <div class="sunrise">
-                    <img src="img/sunrise.png">
-                    <div>
-                        <h2>Sunrise</h2>
-                        <h2>${dayData.astro.sunrise}</h2>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <div class="sunset">
-                    <img src="img/sunset.png">
-                    <div>
-                        <h2>Sunset</h2>
-                        <h2>${dayData.astro.sunset}</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
 
-// --- ГОЛОВНА ФУНКЦІЯ ОТРЫМАННЯ ПОГОДИ ---
+
+
+
 function updateWeather() {
     const town = city.value;
     if (!town) return;
 
-    // Об'єднуємо запити в один (прогноз на 3 дні вже включає в себе поточну погоду current)
+
     const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${town}&days=3&aqi=no&alerts=no`;
 
     fetch(url)
@@ -95,7 +63,6 @@ function updateWeather() {
         .then(data => {
             console.log("Weather Data:", data);
 
-            // 1. Рендеримо поточну погоду (Верхня частина)
             const currentState = data.current.condition.text;
             const weatherDataIcon = getWeatherIcon(currentState);
             const windyDirIcon = getWindArrow(data.current.wind_dir);
@@ -142,7 +109,7 @@ function updateWeather() {
                 </div>
             `;
 
-            // 2. Рендеримо прогноз на 3 дні (Нижня частина)
+
             const forecastDays = data.forecast.forecastday;
             currentNext.innerHTML = `
                 <div class="conteiner">
@@ -153,12 +120,9 @@ function updateWeather() {
         .catch(err => console.error("Помилка завантаження погоди:", err));
 }
 
-// --- СЛУХАЧІ ПОДІЙ (EVENTS) ---
-
-// Оновлюємо погоду при зміні міста
 city.addEventListener('change', updateWeather);
 
-// Фільтр міст (Пошук)
+
 nameFilter.addEventListener('input', function() {
     const filterValue = this.value.toLowerCase();
     let firstVisibleOption = null;
@@ -177,15 +141,47 @@ nameFilter.addEventListener('input', function() {
         }
     }
 
-    // Якщо поточне вибране місто сховане фільтром, перемикаємо на перше доступне
+
     if (firstVisibleOption && city.selectedOptions[0].style.display === "none") {
         city.value = firstVisibleOption.value;
-        updateWeather(); // Викликаємо оновлення погоди для нового міста
+        updateWeather();
     }
 });
 
-// Перший запуск при завантаженні сторінки
+function createDayForecastHTML(dayData) {
+    const icon = getWeatherIcon(dayData.day.condition.text);
+    return `
+        <div class="nextDay">
+            <h1>${dayData.date}</h1>
+            <div class="weather">
+                <img src="img/${icon}">
+                <div>
+                    <h3>${dayData.day.avgtemp_c} °C</h3>
+                    <h3>${dayData.day.avgvis_km} kph</h3>
+                </div>
+            </div>
+            <div class="line">-</div>
+            <div class="astro">
+                <div class="sunrise">
+                    <img src="img/sunrise.png">
+                    <div>
+                        <h2>Sunrise</h2>
+                        <h2>${dayData.astro.sunrise}</h2>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="sunset">
+                    <img src="img/sunset.png">
+                    <div>
+                        <h2>Sunset</h2>
+                        <h2>${dayData.astro.sunset}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
 updateWeather();
 
-// Інтервал оновлення ставимо на 15 хвилин (900000 мс), щоб не спамити API
+
 setInterval(updateWeather, 900000);

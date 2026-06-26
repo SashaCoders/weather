@@ -178,6 +178,7 @@ body {
 
 #current .center_card h2 {
     font-family: "Bahnschrift";
+    text-align: center;
 }
 
 #current .center_card p {
@@ -228,7 +229,7 @@ body {
 }
 
 #current .right_card .windDir h3 {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 #current .line {
@@ -350,361 +351,17 @@ body {
     font-size: 18px;
 }
 
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    box-sizing: border-box; !* Чтобы paddings не ломали ширину блоков на iPhone *!*/
-/*}*/
-
-/*h1, h2, h3, p {*/
-/*    color: white;*/
-/*    text-shadow: 1px 3px 4px rgb(28 24 76 / 0.75);*/
-/*}*/
-
-/*body {*/
-/*    background: url("img/page_main.svg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center center;*/
-/*    background-size: cover;*/
-/*    background-attachment: fixed;*/
-/*    min-height: 100vh;*/
-/*}*/
-
-/*.main {*/
-/*    width: 100%;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.header {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    margin-bottom: 40px;*/
-/*    margin-top: 20px;*/
-/*}*/
-
-/*.header #search {*/
-/*    margin-right: 100px;*/
-/*    display: flex;*/
-/*    line-height: 28px;*/
-/*    align-items: center;*/
-/*    position: relative;*/
-/*    width: 230px;*/
-/*}*/
-
-/*.header #search #name-filter {*/
-/*    width: 100%;*/
-/*    height: 45px;*/
-/*    line-height: 28px;*/
-/*    padding: 10px 15px 10px 1.5rem;*/
-
-/*    border: 1px solid rgba(255, 255, 255, .4);*/
-/*    border-radius: 25px;*/
-/*    background: rgba(217, 217, 217, .35);*/
-/*    backdrop-filter: blur(20px);*/
-/*    -webkit-backdrop-filter: blur(20px);*/
-
-/*    color: white;*/
-/*    font-size: 20px;*/
-/*    outline: none;*/
-/*    transition: .3s ease;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*.header #search #name-filter::placeholder {*/
-/*    color: rgba(255, 255, 255, 0.6);*/
-/*    font-size: 18px;*/
-/*}*/
-
-/*.header #search #name-filter:focus,*/
-/*.header #search #name-filter:hover {*/
-/*    outline: none;*/
-/*    border-color: rgba(255, 255, 255, 0.8);*/
-/*    background: rgba(217, 217, 217, 0.45);*/
-/*    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);*/
-/*}*/
-
-/*.header #search img {*/
-/*    position: absolute;*/
-/*    right: 1.2rem;*/
-/*    width: 1.1rem;*/
-/*    height: 1.1rem;*/
-
-/*    filter: invert(1);*/
-/*    opacity: 0.7;*/
-/*    z-index: 2;*/
-/*}*/
-
-/*#city {*/
-/*    appearance: none;*/
-/*    -webkit-appearance: none;*/
-/*    -moz-appearance: none;*/
-
-/*    border: 1px solid rgba(255, 255, 255, .4);*/
-/*    border-radius: 25px;*/
-/*    background: rgba(217, 217, 217, .35);*/
-/*    backdrop-filter: blur(20px);*/
-
-/*    width: 230px;*/
-/*    padding: 10px 40px 10px 15px;*/
-
-/*    color: white;*/
-/*    font-size: 20px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*#city option {*/
-/*    background: #2d3f6e;*/
-/*    color: white;*/
-/*}*/
-
-/*#current {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    width: 100%;*/
-/*}*/
-
-/*#current .left_card {*/
-/*    background: rgb(234 234 234 / 0.4);*/
-/*    backdrop-filter: blur(20px);*/
-/*    border: 2px solid #DCDCDC;*/
-/*    border-radius: 25px;*/
-/*    width: 250px;*/
-/*    height: 250px;*/
-/*    padding: 20px 13px;*/
-/*}*/
-
-/*#current .left_card h1 {*/
-/*    font-size: 20px;*/
-/*    margin-bottom: 20px;*/
-/*    font-family: "Bahnschrift";*/
-/*}*/
-
-/*#current .left_card .temp h3 {*/
-/*    font-size: 60px;*/
-/*    font-family: "Bahnschrift";*/
-/*    margin-bottom: 30px;*/
-/*}*/
-
-/*#current .left_card .rainChance h3 {*/
-/*    font-size: 17px;*/
-/*    font-family: "Bahnschrift";*/
-/*}*/
-
-/*#current .left_card .rainChance {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*#current .left_card .rainChance img {*/
-/*    margin-right: 10px;*/
-/*}*/
-
-/*#current .center_card {*/
-/*    background: rgb(234 234 234 / 0.4);*/
-/*    backdrop-filter: blur(20px);*/
-/*    border: 2px solid #DCDCDC;*/
-/*    border-radius: 25px;*/
-/*    margin: 0 50px;*/
-/*    width: 400px;*/
-/*    height: 250px;*/
-/*    padding: 20px 13px;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*#current .center_card h2 {*/
-/*    font-family: "Bahnschrift";*/
-/*}*/
-
-/*#current .center_card p {*/
-/*    font-family: "Bahnschrift";*/
-/*}*/
-
-/*#current .right_card {*/
-/*    background: rgb(234 234 234 / 0.4);*/
-/*    backdrop-filter: blur(20px);*/
-/*    border: 2px solid #DCDCDC;*/
-/*    border-radius: 25px;*/
-/*    width: 250px;*/
-/*    height: 250px;*/
-/*    padding: 20px 13px;*/
-/*}*/
-
-/*#current .right_card h1 {*/
-/*    font-size: 20px;*/
-/*    margin-bottom: 20px;*/
-/*    font-family: "Bahnschrift";*/
-/*}*/
-
-/*#current .right_card .windSpeed {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    margin-left: 12px;*/
-/*}*/
-
-/*#current .right_card .windSpeed img {*/
-/*    margin-right: 10px;*/
-/*}*/
-
-/*#current .right_card .windSpeed h3 {*/
-/*    font-size: 17px;*/
-/*    font-family: "Bahnschrift";*/
-/*}*/
-
-/*#current .right_card .windDir {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    margin-top: 35px;*/
-/*    margin-left: 12px;*/
-/*}*/
-
-/*#current .right_card .windDir img {*/
-/*    margin-right: 10px;*/
-/*}*/
-
-/*#current .right_card .windDir h3 {*/
-/*    font-size: 17px;*/
-/*}*/
-
-/*#current .line {*/
-/*    border-radius: 25px;*/
-/*    background: #001B5E;*/
-/*    width: 100%;*/
-/*    height: 3px;*/
-/*    margin: 20px 0;*/
-/*}*/
-
-/*#currentNext {*/
-/*    margin-top: 30px;*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .line {*/
-/*    border-radius: 25px;*/
-/*    background: #001B5E;*/
-/*    width: 100%;*/
-/*    height: 3px;*/
-/*    margin: 10px 0;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*#currentNext .conteiner {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay {*/
-/*    background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);*/
-/*    backdrop-filter: blur(20px);*/
-/*    border: 2px solid #DCDCDC;*/
-/*    border-radius: 25px;*/
-/*    width: 400px;*/
-/*    height: 250px;*/
-/*    padding: 15px 13px;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    margin: 0 25px;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay h1 {*/
-/*    font-size: 23px;*/
-/*    margin-top: 5px;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .weather {*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    height: 180px;*/
-/*    align-items: center;*/
-/*    justify-content: space-around;*/
-/*    margin-top: 10px;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .weather img {*/
-/*    width: 35%;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .weather h3 {*/
-/*    font-size: 35px;*/
-/*    margin: 15px 0;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .astro {*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    align-items: center;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .astro .line {*/
-/*    border-radius: 25px;*/
-/*    background: #001B5E;*/
-/*    width: 12%;*/
-/*    transform: rotate(90deg);*/
-/*    height: 3px;*/
-/*    margin: 20px 0;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .astro .sunrise {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    width: 50%;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .astro .sunrise img {*/
-/*    width: 25%;*/
-/*    margin-right: 30px;*/
-/*    margin-left: 10px;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .astro .sunrise h2 {*/
-/*    font-size: 18px;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .astro .sunset {*/
-/*    width: 50%;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .astro .sunset img {*/
-/*    width: 25%;*/
-/*    margin-right: 30px;*/
-/*    margin-left: 10px;*/
-/*}*/
-
-/*#currentNext .conteiner .nextDay .astro .sunset h2 {*/
-/*    font-size: 18px;*/
-/*}*/
-
-
-/* ==========================================================================
-   КРАСИВАЯ АДАПТАЦИЯ ПОД IPHONE (СТИЛЬ КАРТИНКИ С СОХРАНЕНИЕМ ВСЕХ ФУНКЦИЙ)
-   ========================================================================== */
-
 @media (max-width: 480px) {
     .main {
-        padding: 0 16px; /* Отступы от краев экрана смартфона */
+        padding: 0 16px;
     }
 
     body {
-        background-attachment: scroll !important; /* Фон скроллится плавно и не прыгает */
+        background-attachment: scroll !important;
         background-size: cover;
         min-height: 110vh;
     }
 
-    /* --- Шапка в стиле iOS --- */
     .header {
         flex-direction: column;
         align-items: center;
@@ -713,7 +370,7 @@ body {
         margin-bottom: 25px;
     }
 
-    /* Поисковик не пропадает, а становится аккуратной полосой */
+
     .header #search {
         margin-right: 0;
         width: 100%;
@@ -731,7 +388,7 @@ body {
         font-size: 16px;
     }
 
-    /* Выбор города встает под поиском на всю ширину */
+
     #city {
         width: 100%;
         max-width: 100%;
@@ -742,18 +399,18 @@ body {
         background: rgba(217, 217, 217, 0.2);
     }
 
-    /* --- Сетка блоков (Превращаем в Grid как на iPhone) --- */
+
     #current {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Ровно 2 колонки для виджетов */
+        grid-template-columns: 1fr 1fr;
         gap: 14px;
         width: 100%;
     }
 
-    /* Центральная карточка (WEATHER DATA) становится во всю ширину сверху */
+
     #current .center_card {
         grid-column: span 2;
-        order: -1; /* Выталкиваем на самый верх */
+        order: -1;
         width: 100%;
         height: 120px;
         margin: 0;
@@ -767,6 +424,7 @@ body {
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 4px;
+        text-align: center;
     }
 
     #current .center_card p {
@@ -774,7 +432,7 @@ body {
         color: white;
     }
 
-    /* ИКОНКА УМЕНЬШЕНА (была 85px) */
+
     #current .center_card img {
         position: absolute;
         right: 20px;
@@ -784,7 +442,6 @@ body {
         height: 60px;
     }
 
-    /* Левая карточка (RAIN CHANCE + текущие градусы) */
     #current .left_card {
         width: 100%;
         height: 145px;
@@ -797,12 +454,11 @@ body {
 
     #current .left_card h1 {
         font-size: 10px;
-        /*color: rgba(255, 255, 255, 0.6);*/
         letter-spacing: 0.5px;
         margin-bottom: 0;
     }
 
-    /* Градусы аккуратно уменьшаем под размер виджета */
+
     #current .left_card .temp h3 {
         font-size: 30px;
         margin-bottom: 0;
@@ -819,7 +475,7 @@ body {
         font-size: 14px;
     }
 
-    /* ИКОНКА КАПЛИ УМЕНЬШЕНА (была 18px) */
+
     #current .left_card .rainChance img {
         width: 20px;
         height: 20px;
@@ -830,7 +486,7 @@ body {
         font-size: 10px;
     }
 
-    /* Правая карточка (WIND + направление + стрелочка) */
+
     #current .right_card {
         width: 100%;
         height: 145px;
@@ -858,7 +514,7 @@ body {
         margin-left: 0;
     }
 
-    /* ИКОНКА ВЕТРА УМЕНЬШЕНА (была 20px) */
+
     #current .right_card .windSpeed img {
         width: 20px;
         height: 20px;
@@ -869,13 +525,13 @@ body {
         font-size: 10px;
     }
 
-    /* Блок направления ветра со стрелочкой (Сохранен!) */
+
     #current .right_card .windDir {
         margin-top: 0;
         margin-left: 0;
     }
 
-    /* ИКОНКА СТРЕЛКИ НАПРАВЛЕНИЯ УМЕНЬШЕНА (была 20px) */
+
     #current .right_card .windDir img {
         width: 20px;
         height: 20px;
@@ -892,11 +548,10 @@ body {
     }
 
 
-    /* --- Блок прогноза на 3 дня (Красивая сплошная стеклянная плашка) --- */
     #currentNext {
         margin-top: 20px;
         width: 100%;
-        /*background: rgb(234 234 234 / 0.4);*/
+
         background: linear-gradient(164deg, rgb(166 198 213 / 0.36) 0%, rgb(118 147 174 / 0.36) 59%, rgb(43 82 149 / 0.36) 100%);
         backdrop-filter: blur(20px);
         border: 2px solid #DCDCDC;
@@ -904,7 +559,7 @@ body {
         padding: 20px 15px;
     }
 
-    /* Добавляем заголовок секции сверху плашки */
+
     #currentNext::before {
         content: "THREE DAY FORECAST";
         font-family: "Bahnschrift";
@@ -918,7 +573,7 @@ body {
 
     #currentNext .conteiner {
         display: flex;
-        flex-direction: row; /* Дни выстраиваются в ряд */
+        flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
@@ -926,10 +581,10 @@ body {
     }
 
     #currentNext .conteiner .nextDay {
-        background: none; /* Убираем тройные вложенные рамки */
+        background: none;
         backdrop-filter: none;
         border: none;
-        width: 32%; /* Распределяем ровно на 3 колонки */
+        width: 32%;
         height: auto;
         padding: 0;
         margin: 0;
@@ -941,15 +596,15 @@ body {
         font-weight: 600;
     }
 
-    /* Погода внутри колонок дней */
+
     #currentNext .conteiner .nextDay .weather {
-        flex-direction: column; /* Элементы внутри дня сверху вниз */
+        flex-direction: column;
         height: auto;
         margin-top: 8px;
         gap: 4px;
     }
 
-    /* ИКОНКИ ПОГОДЫ В ПРОГНОЗЕ УМЕНЬШЕНЫ (были 44px) */
+
     #currentNext .conteiner .nextDay .weather img {
         width: 32px;
         height: 32px;
@@ -973,14 +628,14 @@ body {
         font-size: 1px;
     }
 
-    /* --- Восход и Заход солнца (Полностью сохранены и адаптированы!) --- */
+
     #currentNext .conteiner .nextDay .astro {
-        flex-direction: column; /* Внутри узкой колонки дня ставим их друг под друга */
+        flex-direction: column;
         gap: 8px;
         align-items: center;
     }
 
-    /* Скрываем внутреннюю палочку-разделитель, так как blocks теперь вертикальные */
+
     #currentNext .conteiner .nextDay .astro .line {
         display: none;
     }
@@ -992,7 +647,7 @@ body {
         gap: 4px;
     }
 
-    /* ИКОНКИ СОЛНЦА УМЕНЬШЕНЫ (были 18px) */
+
     #currentNext .conteiner .nextDay .astro .sunrise img,
     #currentNext .conteiner .nextDay .astro .sunset img {
         width: 20px;
@@ -1006,7 +661,7 @@ body {
         text-align: center;
     }
 
-    /* Скрываем надписи "Sunrise"/"Sunset", оставляя только время, чтобы текст не слипался */
+
     #currentNext .conteiner .nextDay .astro .sunrise h2:first-of-type,
     #currentNext .conteiner .nextDay .astro .sunset h2:first-of-type {
         display: none;
